@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Formularios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Reset de márgenes y padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+
+        /* Estilo de la cuadrícula de los recuadros */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid flexible */
+            gap: 20px;
+        }
+
+        /* Estilo de cada tarjeta */
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .card a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Media Query para pantallas pequeñas (móviles) */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr; /* En móviles, solo una columna */
+            }
+
+            .card h3 {
+                font-size: 18px; /* Reduce el tamaño de los títulos */
+            }
+
+            .card a {
+                font-size: 14px; /* Reduce el tamaño de los enlaces */
+            }
+        }
+
+        /* Media Query para pantallas grandes (escritorios) */
+        @media (min-width: 1024px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr); /* En pantallas grandes, tres columnas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h3>Formulario 1</h3>
+            <a href="URL_DEL_FORMULARIO_1" target="_blank">Ir al formulario</a>
+        </div>
+        <div class="card">
+            <h3>Formulario 2</h3>
+            <a href="URL_DEL_FORMULARIO_2" target="_blank">Ir al formulario</a>
+        </div>
+        <div class="card">
+            <h3>Formulario 3</h3>
+            <a href="URL_DEL_FORMULARIO_3" target="_blank">Ir al formulario</a>
+        </div>
+        <!-- Puedes agregar más formularios aquí -->
+    </div>
+</body>
+</html>
