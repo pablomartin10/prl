@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Formularios</title>
+    <title>Página de Formularios - PRL</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        /* Reset de márgenes y padding */
         * {
             margin: 0;
             padding: 0;
@@ -17,16 +16,41 @@
             font-family: 'Roboto', sans-serif;
             background-color: #f4f4f9;
             padding: 20px;
+            text-align: center;
+        }
+
+        /* Estilo de los logos en el encabezado */
+        header {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        header img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        /* Estilo de los encabezados */
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #555;
         }
 
         /* Estilo de la cuadrícula de los recuadros */
         .container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid flexible */
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 20px;
         }
 
-        /* Estilo de cada tarjeta */
         .card {
             background-color: white;
             padding: 20px;
@@ -65,27 +89,30 @@
         /* Media Query para pantallas pequeñas (móviles) */
         @media (max-width: 768px) {
             .container {
-                grid-template-columns: 1fr; /* En móviles, solo una columna */
-            }
-
-            .card h3 {
-                font-size: 18px; /* Reduce el tamaño de los títulos */
-            }
-
-            .card a {
-                font-size: 14px; /* Reduce el tamaño de los enlaces */
+                grid-template-columns: 1fr;
             }
         }
 
         /* Media Query para pantallas grandes (escritorios) */
         @media (min-width: 1024px) {
             .container {
-                grid-template-columns: repeat(3, 1fr); /* En pantallas grandes, tres columnas */
+                grid-template-columns: repeat(3, 1fr);
             }
         }
     </style>
 </head>
 <body>
+    <!-- Encabezado con los logos -->
+    <header>
+        <img src="https://github.com/pablomartin10/prl/raw/main/logo1.png" alt="Logo 1">
+        <img src="https://github.com/pablomartin10/prl/raw/main/logo2.png" alt="Logo 2">
+    </header>
+
+    <!-- Títulos de la página -->
+    <h1>Accesos PRL</h1>
+    <h2>Pulsa en el link para acceder a los formularios</h2>
+
+    <!-- Contenedor de los recuadros con enlaces a formularios -->
     <div class="container">
         <div class="card">
             <h3>Formulario 1</h3>
@@ -99,7 +126,16 @@
             <h3>Formulario 3</h3>
             <a href="URL_DEL_FORMULARIO_3" target="_blank">Ir al formulario</a>
         </div>
-        <!-- Puedes agregar más formularios aquí -->
+
+        <!-- Más formularios -->
+        <div class="card">
+            <h3>Formulario 4</h3>
+            <a href="URL_DEL_FORMULARIO_4" target="_blank">Ir al formulario</a>
+        </div>
+        <div class="card">
+            <h3>Formulario 5</h3>
+            <a href="URL_DEL_FORMULARIO_5" target="_blank">Ir al formulario</a>
+        </div>
     </div>
 </body>
 </html>
